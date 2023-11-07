@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <title>JAZ-HomePage</title>
+  </head>
+  <body class="container">
+    <!-- nav -->
+
+    <nav class="grid-con">
+      <div class="logo">
+        <h1 class="hidden">main-logo JAZ</h1>
+        <img src="./images/main-logo.svg" alt="JAZ" />
+      </div>
+      <div
+        class="m-col-start-7 m-col-end-13 l-col-start-8 l-col-end-13 menu-hid"
+      >
+        <h1 class="hidden">navigation-bar</h1>
+        <ul class="menu nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">video</a></li>
+          <li><a class="product" href="#">Product</a></li>
+          <li><a class="buy" href="#">Buy!</a></li>
+        </ul>
+      </div>
+      <img
+        id="hammenu"
+        class="col-start-4 col-end-5"
+        src="images/hammenu.svg"
+        alt="hamburger menu"
+      />
+      <ul class="hidden mobile-menu col-start-1 col-end-5">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#">video</a></li>
+        <li><a class="product" href="#">Product</a></li>
+        <li><a class="buy" href="#">Buy!</a></li>
+      </ul>
+    </nav>
+
+    <!-- hero-page -->
+
+    <section class="hero">
+      <h1 class="hidden">hero-page</h1>
+      <img src="./images/main-logo.svg" alt="JAZ-Logo" class="hero-logo" />
+      <h1 class="hero-title">Immerse in Sound</h1>
+      <p class="hero-subtitle">Wireless. Effortless. Limitless.</p>
+      <button id="exploreButton" class="button">Explore Now</button>
+    </section>
+
+    <!-- Promo-vid -->
+    <!-- scss files in "working.scss" temp -->
+
+    <div
+      class="promo-Video working col-start-1 col-end-5 m-col-start-1 m-col-end-13"
+    >
+      <h1 class="hidden">promo-Video</h1>
+      <h2>Video-here</h2>
+    </div>
+
+    <!-- Ar-Buds -->
+
+    <section class="ar-buds grid-con">
+      <div class="promo col-start-1 col-end-5 m-col-end-13">
+        <h2 class="center">Experience the <span>Unheard!</span></h2>
+        <p class="center">
+          Discover the best sound with our top-rated earbuds.
+        </p>
+      </div>
+      <h1 class="hidden">3D-earbud</h1>
+      <model-viewer
+        id="model"
+        src="images/JazzPods.gltf"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        poster="images/poster.webp"
+        shadow-intensity="1"
+        exposure="0.22"
+        disable-zoom
+        class="col-start-1 .col-end-4"
+      >
+        <button
+          class="Hotspot"
+          slot="hotspot-1"
+          data-position="458.4601637546927m 378.8046367432994m -89.47283371117958m"
+          data-normal="0.9241220927012603m 0.3796011673730273m -0.04360403089713338m"
+          data-visibility-attribute="visible"
+        >
+          <div class="HotspotAnnotation" id="hotspot-1"></div></button
+        ><button
+          class="Hotspot"
+          slot="hotspot-2"
+          data-position="509.01909779289974m 329.2826135217546m -74.35207584582177m"
+          data-normal="0.9207812132942922m -0.09142354080942049m 0.3792145743904889m"
+          data-visibility-attribute="visible"
+        >
+          <div class="HotspotAnnotation" id="hotspot-2"></div></button
+        ><button
+          class="Hotspot"
+          slot="hotspot-3"
+          data-position="362.59570590313126m 372.40095499384466m -90.79522672698324m"
+          data-normal="-0.9999289100743859m 0.000044212188997876875m 0.011923625402256858m"
+          data-visibility-attribute="visible"
+        >
+          <div class="HotspotAnnotation" id="hotspot-3"></div></button
+        ><button
+          class="Hotspot"
+          slot="hotspot-4"
+          data-position="365.45696516536606m 337.1669892070015m -90.86304893725801m"
+          data-normal="-0.9797536961094886m -0.20018841504910975m 0.0027006369473129475m"
+          data-visibility-attribute="visible"
+        >
+          <div class="HotspotAnnotation" id="hotspot-4"></div>
+        </button>
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+      <div class="promo col-start-1 col-end-5 m-col-end-13">
+        <a href="#" class="button center">More-Info</a>
+      </div>
+    </section>
+    <!-- X-ray Slider -->
+    <!-- scss files in "working.scss" temp -->
+    <h1 class="hidden">Cool-Xray-earbuds</h1>
+    <section class="working grid-con">
+      <div class="xray m-col-start-1 m-col-end-13">
+        <h2>x-ray slider here</h2>
+      </div>
+      <div class="xray-mobile col-start-1 col-end-5">
+        <h2>x-ray img here</h2>
+      </div>
+    </section>
+
+    <!-- buy-now -->
+    <section class="buynow">
+      <h1 class="hidden">Buy-now-section</h1>
+      <div class="grid-con">
+        <div class="col-span-full m-col-span-6">
+          <div class="image-container">
+            <img src="./images/Hero-img.jpg" alt="Earbuds Image" />
+          </div>
+        </div>
+        <div class="buy-now col-span-full m-col-span-6">
+          <div class="content">
+            <h2>Experience the Future of Sound</h2>
+            <p>
+              Immerse yourself in high-fidelity audio with our latest earbuds.
+              Enjoy seamless connectivity and all-day comfort.
+            </p>
+            <a href="#" class="buynow-button">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <!-- scss files in "working.scss" temp -->
+
+    <div
+      class="footer-working col-start-1 col-end-5 m-col-start-1 m-col-end-13"
+    >
+      <h1 class="hidden">footer</h1>
+      <h2>footer-here</h2>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <!-- main JavaScript file -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
