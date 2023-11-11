@@ -293,15 +293,17 @@ model-viewer > #ar-prompt > img {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.75rem;
   opacity: 0;
   transform: translateY(100px);
+  font-family: "Raleway", sans-serif;
 }
 
 .hero-subtitle {
   font-size: 2rem;
   opacity: 0;
   transform: translateY(100px);
+  font-family: "Raleway", sans-serif;
 }
 
 .button {
@@ -317,6 +319,7 @@ model-viewer > #ar-prompt > img {
   font-size: 1rem;
   letter-spacing: 2px;
   border-radius: 5px;
+  font-family: "Raleway", sans-serif;
 }
 
 .working {
