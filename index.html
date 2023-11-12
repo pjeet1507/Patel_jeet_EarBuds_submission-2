@@ -16,17 +16,15 @@
   <body class="container">
     <!-- nav -->
 
-    <nav class="grid-con">
+    <nav class="nav grid-con">
       <div class="logo">
         <h1 class="hidden">main-logo JAZ</h1>
         <img src="./images/main-logo.svg" alt="JAZ" />
       </div>
-      <div
-        class="m-col-start-7 m-col-end-13 l-col-start-8 l-col-end-13 menu-hid"
-      >
+      <div class="m-col-start-8 l-col-start-9 xl-col-start-10 menu-hid">
         <h1 class="hidden">navigation-bar</h1>
         <ul class="menu nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a class="home" href="#">Home</a></li>
           <li><a href="#">video</a></li>
           <li><a class="product" href="#">Product</a></li>
           <li><a class="buy" href="#">Buy!</a></li>
@@ -39,7 +37,7 @@
         alt="hamburger menu"
       />
       <ul class="hidden mobile-menu col-start-1 col-end-5">
-        <li><a href="#hero">Home</a></li>
+        <li><a class="home" href="#">Home</a></li>
         <li><a href="#">video</a></li>
         <li><a class="product" href="#">Product</a></li>
         <li><a class="buy" href="#">Buy!</a></li>
@@ -56,15 +54,12 @@
       <button id="exploreButton" class="button">Explore Now</button>
     </section>
 
-    <!-- Promo-vid -->
-    <!-- scss files in "working.scss" temp -->
-
-    <div
-      class="promo-Video working col-start-1 col-end-5 m-col-start-1 m-col-end-13"
-    >
-      <h1 class="hidden">promo-Video</h1>
-      <h2>Video-here</h2>
-    </div>
+    <!-- Promo-animation -->
+    <section class="grid-con">
+      <div class="col-span-full">
+        <canvas id="jaz-pods"></canvas>
+      </div>
+    </section>
 
     <!-- Ar-Buds -->
 
@@ -91,32 +86,32 @@
         <button
           class="Hotspot"
           slot="hotspot-1"
-          data-position="458.4601637546927m 378.8046367432994m -89.47283371117958m"
-          data-normal="0.9241220927012603m 0.3796011673730273m -0.04360403089713338m"
+          data-position="-645.6657610672951m 589.9250029244328m -5310.746774633728m"
+          data-normal="0.04360399905071555m 0.37960117849394104m 0.9241220896357777m"
           data-visibility-attribute="visible"
         >
           <div class="HotspotAnnotation" id="hotspot-1"></div></button
         ><button
           class="Hotspot"
           slot="hotspot-2"
-          data-position="509.01909779289974m 329.2826135217546m -74.35207584582177m"
-          data-normal="0.9207812132942922m -0.09142354080942049m 0.3792145743904889m"
+          data-position="-781.5439501885305m 153.75545794761877m -4860.527721806165m"
+          data-normal="-0.35542477765471014m -0.12445333625168689m 0.9263825314225893m"
           data-visibility-attribute="visible"
         >
           <div class="HotspotAnnotation" id="hotspot-2"></div></button
         ><button
           class="Hotspot"
           slot="hotspot-3"
-          data-position="362.59570590313126m 372.40095499384466m -90.79522672698324m"
-          data-normal="-0.9999289100743859m 0.000044212188997876875m 0.011923625402256858m"
+          data-position="-635.1701466861585m 528.9505390320714m -6165.140676220375m"
+          data-normal="0.011806086768728697m 0.000044262157746946694m -0.9999303047493213m"
           data-visibility-attribute="visible"
         >
           <div class="HotspotAnnotation" id="hotspot-3"></div></button
         ><button
           class="Hotspot"
           slot="hotspot-4"
-          data-position="365.45696516536606m 337.1669892070015m -90.86304893725801m"
-          data-normal="-0.9797536961094886m -0.20018841504910975m 0.0027006369473129475m"
+          data-position="-633.2035830501482m 223.10741529957545m -6140.041817683564m"
+          data-normal="0.0036906906698428565m -0.07012436494279643m -0.9975314292009797m"
           data-visibility-attribute="visible"
         >
           <div class="HotspotAnnotation" id="hotspot-4"></div>
@@ -147,7 +142,7 @@
       <div class="grid-con">
         <div class="col-span-full m-col-span-6">
           <div class="image-container">
-            <img src="./images/Hero-img.jpg" alt="Earbuds Image" />
+            <img src="./images/Hero-img.webp" alt="Earbuds Image" />
           </div>
         </div>
         <div class="buy-now col-span-full m-col-span-6">

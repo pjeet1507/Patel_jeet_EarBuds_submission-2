@@ -31,6 +31,54 @@
     delay: 0.9,
   });
 
+  //animation
+
+  const canvas = document.querySelector("#jaz-pods");
+  const context = canvas.getContext("2d");
+  canvas.width = 1920;
+  canvas.height = 1080;
+  const frameCount = 150;
+  const images = [];
+  let loadedImages = 0;
+
+  const buds = {
+    frame: 0,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.onload = function () {
+      loadedImages++;
+      if (loadedImages === frameCount) {
+        startAnimation();
+      }
+    };
+    img.src = `images/${(i + 1).toString().padStart(3, "0")}.jpg`;
+    images.push(img);
+  }
+
+  function startAnimation() {
+    gsap.to(buds, {
+      frame: 149,
+      snap: "frame",
+      scrollTrigger: {
+        trigger: "#jaz-pods",
+        pin: true,
+        scrub: 5,
+        start: "center center",
+      },
+      onUpdate: render,
+    });
+  }
+
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    if (images[buds.frame]) {
+      context.drawImage(images[buds.frame], 0, 0);
+    }
+  }
+
+  //-------product
   document.querySelectorAll(".product").forEach(function (button) {
     button.addEventListener("click", function () {
       gsap.to(window, { duration: 1, scrollTo: ".ar-buds" });
@@ -149,6 +197,13 @@
   });
 
   //end-hotspots
+
+  //home-scroll
+  document.querySelectorAll(".home").forEach(function (button) {
+    button.addEventListener("click", function () {
+      gsap.to(window, { duration: 1, scrollTo: ".hero" });
+    });
+  });
 
   //buy-scroll
 
