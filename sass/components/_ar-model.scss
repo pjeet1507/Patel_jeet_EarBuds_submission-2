@@ -1,11 +1,48 @@
+@use "../abstracts/variables" as v;
+
+
+
 model-viewer {
   grid-column: 1 / -1;
   width: 100%;
+  height: 60vh;
+  background-color: v.$color-background;
+  margin: 0 auto;
+  border-radius: 20px;
+
+  &::part(default-progress-bar) {
+    height: 30px;
+    background-color: #E89B36;
+  }
+
+  &#ar-prompt {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    animation: elongate 2s infinite ease-in-out alternate;
+    display: none;
+
+    &>img {
+      animation: circle 4s linear infinite;
+    }
+  }
+
+  &[ar-status="session-started"] &#ar-prompt {
+    display: block;
+  }
 }
 
 .promo {
   font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+
+  h2 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
 }
 
 span {
@@ -13,18 +50,11 @@ span {
   color: blue;
 }
 
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-model-viewer {
-  height: 60vh;
-  background-color: #000000;
-  margin: 0 auto;
-  border-radius: 20px;
-
 }
 
 .Hotspot {
@@ -34,11 +64,11 @@ model-viewer {
   height: 38px;
   display: none;
   transition: all 1s ease-in-out;
-}
 
-.Hotspot:not([data-visible]) {
-  opacity: 0;
-  pointer-events: none;
+  &:not([data-visible]) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .HotspotAnnotation {
@@ -49,7 +79,7 @@ model-viewer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.8);
   display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 700;
   left: calc(100% + 1em);
@@ -60,26 +90,19 @@ model-viewer {
   top: 50%;
   width: max-content;
   text-align: left;
-}
 
-.HotspotAnnotation p {
-  color: #dadada;
-  line-height: 22px;
-  font-weight: 300;
-}
+  p {
+    color: #000000;
+    line-height: 22px;
+    font-weight: 5;
+  }
 
-.HotspotAnnotation h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #fff;
+  h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000000;
+  }
 }
-
-model-viewer::part(default-progress-bar) {
-  height: 30px;
-  background-color: #E89B36;
-}
-
-/* AR Rules */
 
 #ar-button {
   background-image: url(../images/ar_icon.png);
@@ -93,25 +116,25 @@ model-viewer::part(default-progress-bar) {
   white-space: nowrap;
   bottom: 16px;
   padding: 0px 16px 0px 40px;
-  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #4285f4;
   height: 36px;
   line-height: 36px;
   border-radius: 18px;
   border: 1px solid #DADCE0;
-}
 
-#ar-button:active {
-  background-color: #E8EAED;
-}
+  &:active {
+    background-color: #E8EAED;
+  }
 
-#ar-button:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-#ar-button:focus-visible {
-  outline: 1px solid #4285f4;
+  &:focus-visible {
+    outline: 1px solid #4285f4;
+  }
 }
 
 @keyframes circle {
@@ -134,32 +157,13 @@ model-viewer::part(default-progress-bar) {
   }
 }
 
-model-viewer>#ar-prompt {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  animation: elongate 2s infinite ease-in-out alternate;
-  display: none;
-}
-
-model-viewer[ar-status="session-started"]>#ar-prompt {
-  display: block;
-}
-
-model-viewer>#ar-prompt>img {
-  animation: circle 4s linear infinite;
-}
-
 @media screen and (min-width: 730px) {
-
   model-viewer {
     height: 80vh;
   }
 
   .promo {
     font-size: 1.4rem;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
   }
-
-
-
 }
