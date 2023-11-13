@@ -165,6 +165,7 @@ span {
   padding: 10px;
   justify-content: center;
   align-items: center;
+  width: 10vh;
 }
 
 .menu-hid {
@@ -396,6 +397,92 @@ span {
 
 #jaz-pods {
   max-width: 100%;
+}
+
+#outerShell {
+  display: none;
+}
+
+#mobile-tablet-view {
+  margin: auto;
+}
+#mobile-tablet-view img {
+  width: 40vh;
+}
+
+.xray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 3vh;
+}
+h2 span {
+  font-size: 3vh;
+  color: 0;
+}
+
+@media screen and (min-width: 720px) {
+  #mobile-tablet-view img {
+    width: 50vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view {
+    display: none;
+  }
+  #outerShell {
+    display: block;
+    max-width: 1200px;
+    margin-top: 40px;
+    border: solid 1px #666;
+    margin: auto;
+  }
+  #imageCon {
+    position: relative;
+    max-width: 1200px;
+    height: 85vh;
+  }
+  .slideImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 85vh;
+  }
+  .image-right {
+    background: url(../images/earbud-x-ray.jpg) no-repeat;
+    background-size: cover;
+  }
+  .image-left {
+    background: url(../images/earbud.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+  .image-drag {
+    background-color: lightblue;
+    left: 50%;
+    width: 4px;
+    cursor: pointer;
+  }
+}
+.footer {
+  font-family: "Raleway", sans-serif;
+  background-color: #000000;
+  color: #00FFFF;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  margin: auto;
+  padding: 10px;
 }
 
 a {
