@@ -31,6 +31,43 @@
     delay: 0.9,
   });
 
+  //x-ray
+  let imageCon = document.querySelector("#imageCon"),
+    drag = document.querySelector(".image-drag"),
+    left = document.querySelector(".image-left"),
+    dragging = false,
+    min = 0,
+    max = imageCon.offsetWidth;
+
+  // function
+  function onDown() {
+    dragging = true;
+    console.log("on down Called");
+  }
+
+  function onUp() {
+    dragging = false;
+    console.log("on up Called");
+  }
+
+  function onMove(event) {
+    if (dragging === true) {
+      let x = event.clientX - imageCon.getBoundingClientRect().left;
+      if (x < min) {
+        x = min;
+      } else if (x > max) {
+        x = max - 4;
+      }
+
+      drag.style.left = x + "px";
+      left.style.width = x + "px";
+    }
+  }
+
+  // event listeners
+  drag.addEventListener("mousedown", onDown);
+  document.body.addEventListener("mouseup", onUp);
+  document.body.addEventListener("mousemove", onMove);
   //animation
 
   const canvas = document.querySelector("#jaz-pods");
@@ -211,5 +248,16 @@
     button.addEventListener("click", function () {
       gsap.to(window, { duration: 1, scrollTo: ".buynow" });
     });
+  });
+
+  // footer-nav
+  gsap.from("#site-footer", {
+    scrollTrigger: {
+      trigger: "#site-footer",
+      start: "top bottom", // Trigger animation when the top of the footer hits the bottom of the viewport
+    },
+    y: 50, // Start 50 pixels below its starting position
+    opacity: 0,
+    duration: 1,
   });
 })();

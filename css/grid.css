@@ -43,10 +43,6 @@ html {
 
 /*---We do not use media queries for mobile or Justin will find us...*/
 
-/*body {
-   background-color: #000;
- }*/
-
 .full-width-grid-con {
   display: grid;
   grid-template-columns: 1fr minmax(0, 767px) 1fr;
@@ -151,10 +147,6 @@ html {
 /* 3. ---Tablet Library Grid Styles--- */
 
 @media screen and (min-width: 730px) {
-  /*body {
-     background: #ff0000;
-   }*/
-
   .full-width-grid-con {
     display: grid;
     grid-template-columns: 1fr minmax(0, 1199px) 1fr;

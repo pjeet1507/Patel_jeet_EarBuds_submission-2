@@ -55,6 +55,7 @@
     </section>
 
     <!-- Promo-animation -->
+    <h1 class="hidden">promotion-animation</h1>
     <section class="grid-con">
       <div class="col-span-full">
         <canvas id="jaz-pods"></canvas>
@@ -125,16 +126,28 @@
       </div>
     </section>
     <!-- X-ray Slider -->
-    <!-- scss files in "working.scss" temp -->
-    <h1 class="hidden">Cool-Xray-earbuds</h1>
-    <section class="working grid-con">
-      <div class="xray m-col-start-1 m-col-end-13">
-        <h2>x-ray slider here</h2>
-      </div>
-      <div class="xray-mobile col-start-1 col-end-5">
-        <h2>x-ray img here</h2>
-      </div>
-    </section>
+    <div class="xray">
+      <h2 class="xray-text">Experience the <span>Difference!</span></h2>
+    </div>
+    <div class="grid-con">
+      <section class="col-span-full">
+        <h2 class="hidden">X-Ray revealer</h2>
+        <div id="mobile-tablet-view">
+          <img src="images/earbud.jpg" alt="xray-earbuds" />
+          <img src="images/earbud-x-ray.jpg" alt="earbuds" />
+        </div>
+        <div id="outerShell">
+          <div id="imageCon">
+            <!-- xray version -->
+            <div class="slideImage image-right"></div>
+            <!-- rendered version -->
+            <div class="slideImage image-left"></div>
+            <!-- drag bar -->
+            <div class="slideImage image-drag"></div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- buy-now -->
     <section class="buynow">
@@ -147,27 +160,17 @@
         </div>
         <div class="buy-now col-span-full m-col-span-6">
           <div class="content">
-            <h2>Experience the Future of Sound</h2>
-            <p>
-              Immerse yourself in high-fidelity audio with our latest earbuds.
-              Enjoy seamless connectivity and all-day comfort.
-            </p>
-            <a href="#" class="buynow-button">Buy Now</a>
-          </div>
-        </div>
+            <h2></h2>
+           </div>
       </div>
     </section>
 
-    <!-- footer -->
-    <!-- scss files in "working.scss" temp -->
-
-    <div
-      class="footer-working col-start-1 col-end-5 m-col-start-1 m-col-end-13"
-    >
-      <h1 class="hidden">footer</h1>
-      <h2>footer-here</h2>
-    </div>
-
+    <footer class="footer">
+      <div class="footer-content">
+          <p>© 2023 JAZ Earbuds. All rights reserved.</p>
+          <!-- You can add more content here like links, social media icons, etc. -->
+      </div>
+  </footer>
     <!-- Scripts -->
     <script
       type="module"
